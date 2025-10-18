@@ -1,0 +1,16 @@
+image:
+  repository: ghcr.io/votre-org/my-app
+  tag: latest
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  AWS_ACCESS_KEY_ID: test
+  AWS_SECRET_ACCESS_KEY: test
+  AWS_REGION: eu-west-1
+  AWS_ENDPOINT: http://localstack.default.svc.cluster.local:4566
+  S3_BUCKET: my-app-bucket
