@@ -19,7 +19,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3000
+            - containerPort: {{ .Values.containerPort | default 80 }}
           env:
             - name: AWS_ACCESS_KEY_ID
               value: {{ .Values.env.AWS_ACCESS_KEY_ID | quote }}

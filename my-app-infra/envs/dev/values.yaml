@@ -1,12 +1,14 @@
 image:
-  repository: ghcr.io/votre-org/my-app
-  tag: latest
+  repository: nginx
+  tag: "1.25"
 
 replicaCount: 1
 
 service:
   type: ClusterIP
   port: 80
+
+containerPort: 80
 
 env:
   AWS_ACCESS_KEY_ID: test
