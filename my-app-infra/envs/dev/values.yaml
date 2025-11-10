@@ -8,6 +8,9 @@ service:
   type: ClusterIP
   port: 80
 
+labels:
+  demo: "enabled"
+
 containerPort: 80
 
 env:
